@@ -7,6 +7,6 @@ window.TFF_CONFIG = {
   // Settings > Billing > Customer portal). Subscribers sign in with an emailed code.
   portalLoginUrl: '',
   // Where waitlist requests go when all spots are taken. Empty = point people to Instagram.
-  waitlistEmail: '',
+  waitlistEmail: 'ang.thompson62@gmail.com',
   instagramUrl: 'https://www.instagram.com/trampoline.flower.farm/',
 };
