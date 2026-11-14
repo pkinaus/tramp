@@ -126,6 +126,45 @@
       </p>
     </section>
 
+
+    <section id="subscribe" class="subscribe" aria-labelledby="subscribe-heading">
+      <h2 id="subscribe-heading">Flower subscription</h2>
+      <p class="subscribe__lede">
+        A bunch set aside for you at the farm gate, weekly or monthly. Pick it up
+        on Wrexham Road, Friday or Saturday afternoon. Billing pauses in the
+        off-season; cancel any time.
+      </p>
+
+      <form id="subscribe-form" class="subscribe__form" novalidate>
+        <fieldset>
+          <legend>Bunch</legend>
+          <div class="subscribe__choices" id="choices-size"></div>
+        </fieldset>
+        <fieldset>
+          <legend>How often</legend>
+          <div class="subscribe__choices" id="choices-frequency"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Pickup</legend>
+          <div class="subscribe__choices" id="choices-day"></div>
+        </fieldset>
+
+        <p class="subscribe__summary" id="subscribe-summary" aria-live="polite"></p>
+        <p class="subscribe__spots" id="subscribe-spots" aria-live="polite">Checking spots…</p>
+        <button class="subscribe__button" id="subscribe-button" type="submit" disabled>Continue to payment</button>
+        <p class="subscribe__error" id="subscribe-error" role="alert"></p>
+        <p class="subscribe__fine">
+          Farm-gate pickup only, no delivery. Secure payment by Stripe; the first
+          payment is taken at sign-up, then each week or month after.
+        </p>
+        <p class="subscribe__fine" id="subscribe-manage" hidden>
+          Already subscribed? <a id="portal-link" href="#">Manage or cancel your subscription</a>
+        </p>
+        <noscript><p class="subscribe__fine">Subscribing needs JavaScript turned on.</p></noscript>
+      </form>
+      <div class="subscribe__full" id="subscribe-full" hidden></div>
+    </section>
+
     <section id="visit" class="visit" aria-labelledby="visit-heading">
       <h2 id="visit-heading">At the gate</h2>
       <div class="visit__strip">
@@ -164,5 +203,7 @@
       Thirroul · Dharawal Country · no plastics, no pesticides
     </p>
   </footer>
+  <script src="site-config.js"></script>
+  <script src="subscribe.js" defer></script>
 </body>
 </html>

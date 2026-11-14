@@ -1,0 +1,14 @@
+name = "tff-subscriptions"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true # webhook logs show in the Cloudflare dashboard (Workers > tff-subscriptions > Logs)
+
+[vars]
+# Public settings. Secrets (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET) go in with `npx wrangler secret put`.
+SITE_URL = "https://pkinaus.github.io/tramp"
+ALLOWED_ORIGINS = "https://pkinaus.github.io"
+# MAX_SUBSCRIBERS = "10"           # optional override of plans.json maxSubscribers
+# PORTAL_CONFIGURATION_ID = "bpc_..." # printed by `npm run setup`

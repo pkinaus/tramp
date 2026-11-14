@@ -1,0 +1,23 @@
+{
+  "name": "tff-subscriptions",
+  "private": true,
+  "type": "module",
+  "description": "Serverless backend (Cloudflare Worker) for Trampoline Flower Farm flower subscriptions",
+  "scripts": {
+    "dev": "wrangler dev",
+    "dev:node": "node scripts/dev-server.mjs",
+    "deploy": "wrangler deploy",
+    "setup": "node scripts/setup-stripe.mjs",
+    "season": "node scripts/pause-season.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "stripe": "^23.1.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.162.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

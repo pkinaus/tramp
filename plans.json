@@ -1,0 +1,19 @@
+{
+  "_comment": "Single source of truth for subscription plans. Amounts are in cents (AUD). After changing a price, re-run `npm run setup` in backend/ so Stripe gets a matching Price.",
+  "currency": "aud",
+  "maxSubscribers": 10,
+  "metadataTag": "flower_subscription",
+  "sizes": [
+    { "id": "small", "name": "Small bunch", "amount": 3000 },
+    { "id": "large", "name": "Large bunch", "amount": 5000 }
+  ],
+  "frequencies": [
+    { "id": "weekly", "label": "Weekly", "interval": "week", "note": "one bunch every week" },
+    { "id": "monthly", "label": "Monthly", "interval": "month", "note": "one bunch a month" }
+  ],
+  "pickupDays": [
+    { "id": "friday", "label": "Friday afternoon" },
+    { "id": "saturday", "label": "Saturday afternoon" }
+  ],
+  "pickup": "Farm gate, Wrexham Road, Thirroul"
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>You’re subscribed · Trampoline Flower Farm</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="./">Trampoline Flower Farm</a>
+    </div>
+  </header>
+  <main class="notice">
+    <h1>You’re subscribed. Thank you!</h1>
+    <p>
+      Your bunch will be waiting at the farm gate on Wrexham Road, Thirroul, on the
+      afternoon you picked. Stripe has emailed your receipt.
+    </p>
+    <p>
+      Billing pauses in the off-season, and you can update your card or cancel
+      any time.
+    </p>
+    <p>
+      <button class="subscribe__button" id="manage" type="button" hidden>Manage your subscription</button>
+    </p>
+    <p class="subscribe__error" id="manage-error" role="alert"></p>
+    <p><a href="./">Back to the farm</a></p>
+  </main>
+  <script src="site-config.js"></script>
+  <script>
+    (function () {
+      var cfg = window.TFF_CONFIG || {};
+      var q = new URLSearchParams(location.search);
+      var local = ['localhost', '127.0.0.1'].indexOf(location.hostname) !== -1;
+      var api = ((local && q.get('api')) || cfg.apiBase || '').replace(/\/+$/, '');
+      var sessionId = q.get('session_id');
+      var btn = document.getElementById('manage');
+      if (!api || !sessionId) return;
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        btn.disabled = true;
+        fetch(api + '/api/portal', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ sessionId: sessionId })
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d.url) location.href = d.url;
+            else throw new Error(d.error || 'Could not open the subscription page.');
+          })
+          .catch(function (e) {
+            document.getElementById('manage-error').textContent = e.message;
+            btn.disabled = false;
+          });
+      });
+    })();
+  </script>
+</body>
+</html>
