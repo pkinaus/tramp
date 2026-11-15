@@ -3,205 +3,285 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Trampoline Flower Farm — small-scale cut flowers on Dharawal Country, Thirroul. No plastics, no pesticides. Farm-gate bunches Fri & Sat." />
+  <meta name="description" content="Trampoline Flower Farm: seasonal cut flowers grown in a Thirroul backyard on Dharawal Country. No plastics, no pesticides. Weekly flower subscription with farm-gate pickup, Friday or Saturday afternoon." />
+  <meta name="theme-color" content="#fbf3e7" />
+  <meta property="og:title" content="Trampoline Flower Farm · Thirroul" />
+  <meta property="og:description" content="Seasonal bunches from a backyard flower farm in Thirroul. Weekly subscription, farm-gate pickup." />
+  <meta property="og:image" content="images/hero-bunch-900.jpg" />
   <title>Trampoline Flower Farm · Thirroul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,50;1,9..144,400..600,50&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/hero-bunch-900.jpg" imagesrcset="images/hero-bunch-900.jpg 675w, images/hero-bunch-1600.jpg 1200w" imagesizes="(min-width: 960px) 44vw, 92vw" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="wordmark" href="#top">Trampoline Flower Farm</a>
-      <a
-        class="ig"
-        href="https://www.instagram.com/trampoline.flower.farm/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Instagram</a>
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="#top" aria-label="Trampoline Flower Farm, back to top">
+        <span class="wordmark__mark" aria-hidden="true">✿</span>
+        <span>Trampoline <em>Flower Farm</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#story">Story</a>
+        <a href="#how">How it works</a>
+        <a href="#gallery">Flowers</a>
+        <a href="#visit">Visit</a>
+        <a class="btn btn--small" href="#subscribe">Subscribe</a>
+      </nav>
     </div>
   </header>
 
   <main id="main">
+    <!-- Hero -->
     <section id="top" class="hero" aria-labelledby="hero-title">
-      <figure class="hero__figure">
-        <img
-          class="hero__img"
-          src="photos/web/01-straw-hat.jpg"
-          alt="Angie Thompson in a straw hat among pink sweet peas under a clear blue sky"
-          width="1200"
-          height="1600"
-          fetchpriority="high"
-        />
-      </figure>
-      <div class="hero__copy">
-        <p class="hero__eyebrow">Thirroul · Dharawal Country</p>
-        <h1 id="hero-title">Trampoline Flower Farm</h1>
-        <p class="hero__lede">
-          Fresh bunches from a backyard farm on Wrexham Road.
-        </p>
-        <p class="hero__tag">
-          No plastics, no pesticides. Growing small-scale.
-        </p>
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Thirroul · Dharawal Country</p>
+          <h1 id="hero-title">Backyard flowers, <em>picked for you</em> every week.</h1>
+          <p class="hero__lede">
+            Sweet peas, poppies, ranunculus and dahlias, grown small-scale on Wrexham
+            Road without plastics or pesticides. Subscribe and a bunch waits for you
+            at the farm gate.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--poppy" href="#subscribe">Subscribe from $30 a week</a>
+            <a class="btn btn--ghost" href="#visit">Visit the farm gate</a>
+          </div>
+          <ul class="hero__facts" aria-label="Farm promises">
+            <li>No plastics</li>
+            <li>No pesticides</li>
+            <li>Limited subscriber spots</li>
+          </ul>
+        </div>
+        <figure class="hero__figure">
+          <img
+            class="hero__img"
+            src="images/hero-bunch-900.jpg"
+            srcset="images/hero-bunch-900.jpg 675w, images/hero-bunch-1600.jpg 1200w"
+            sizes="(min-width: 960px) 44vw, 92vw"
+            alt="A just-picked bunch of pink and lavender sweet peas with orange and peach poppies, wrapped in grey paper"
+            width="1200"
+            height="1600"
+            fetchpriority="high"
+          />
+          <span class="hero__badge" aria-hidden="true">Fresh<br />at the<br />gate</span>
+        </figure>
       </div>
     </section>
 
-    <section class="mosaic" aria-label="Farm photos">
-      <ul class="mosaic__grid">
-        <li class="mosaic__item mosaic__item--wide">
+    <div class="ribbon" aria-hidden="true">
+      <p>Sweet peas <span>✿</span> Iceland poppies <span>✿</span> Ranunculus <span>✿</span> Dahlias <span>✿</span> Paper daisies <span>✿</span> Roses <span>✿</span> Gerberas</p>
+    </div>
+
+    <!-- Story -->
+    <section id="story" class="story section" aria-labelledby="story-heading">
+      <div class="wrap story__inner">
+        <div class="story__photos">
           <img
-            src="photos/web/04-daisies-hill.jpg"
-            alt="Pink and white paper daisies on the hillside with a blue nest swing in the gum tree"
-            width="1600"
-            height="1200"
-            loading="eager"
-          />
-        </li>
-        <li class="mosaic__item">
-          <img
-            src="photos/web/02-garden-beds.jpg"
-            alt="Sweet pea vines along a garden bed path"
+            class="story__photo story__photo--tall"
+            src="images/angie-garden-path-700.jpg"
+            srcset="images/angie-garden-path-700.jpg 525w, images/angie-garden-path-1200.jpg 900w"
+            sizes="(min-width: 960px) 30vw, 60vw"
+            alt="Angie Thompson in a straw hat standing on a freshly dug garden path between banana palms and flower beds"
             width="900"
             height="1200"
             loading="lazy"
           />
-        </li>
-        <li class="mosaic__item">
           <img
-            src="photos/web/03-bunches.jpg"
-            alt="Farm-gate bunches and orange poppies packed for the road"
-            width="1200"
+            class="story__photo story__photo--small"
+            src="images/angie-rose-900.jpg"
+            alt="Angie holding up a single pink garden rose"
+            width="675"
             height="900"
             loading="lazy"
           />
-        </li>
-        <li class="mosaic__item mosaic__item--wide">
-          <img
-            src="photos/web/05-garden-article.jpg"
-            alt="Paper daisies on the hillside steps"
-            width="1600"
-            height="1067"
-            loading="lazy"
-          />
-        </li>
-        <li class="mosaic__item">
-          <img
-            src="photos/web/06-grid-a.jpg"
-            alt="Working the beds and a peach dahlia harvest"
-            width="800"
-            height="1000"
-            loading="lazy"
-          />
-        </li>
-        <li class="mosaic__item">
-          <img
-            src="photos/web/07-grid-b.jpg"
-            alt="A pink and yellow dahlia in hand"
-            width="800"
-            height="1000"
-            loading="lazy"
-          />
-        </li>
-        <li class="mosaic__item mosaic__item--span">
-          <img
-            src="photos/web/08-grid-c.jpg"
-            alt="Peach and magenta dahlias in the bed"
-            width="800"
-            height="1000"
-            loading="lazy"
-          />
-        </li>
-      </ul>
-    </section>
-
-    <section id="story" class="prose" aria-labelledby="story-heading">
-      <h2 id="story-heading">The story</h2>
-      <p>
-        A media redundancy opened the door. Angie turned the Thirroul backyard —
-        trampoline and all — into a small flower farm.
-      </p>
-      <p>
-        Seasonal bunches at the gate. Sweet peas, dahlias, natives, whatever the
-        weather lets through.
-      </p>
-    </section>
-
-
-    <section id="subscribe" class="subscribe" aria-labelledby="subscribe-heading">
-      <h2 id="subscribe-heading">Flower subscription</h2>
-      <p class="subscribe__lede">
-        A bunch set aside for you at the farm gate every week. Pick it up
-        on Wrexham Road, Friday or Saturday afternoon. Billing pauses in the
-        off-season; cancel any time.
-      </p>
-
-      <form id="subscribe-form" class="subscribe__form" novalidate>
-        <fieldset>
-          <legend>Bunch</legend>
-          <div class="subscribe__choices" id="choices-size"></div>
-        </fieldset>
-        <fieldset id="fieldset-frequency">
-          <legend>How often</legend>
-          <div class="subscribe__choices" id="choices-frequency"></div>
-        </fieldset>
-        <fieldset>
-          <legend>Pickup</legend>
-          <div class="subscribe__choices" id="choices-day"></div>
-        </fieldset>
-
-        <p class="subscribe__summary" id="subscribe-summary" aria-live="polite"></p>
-        <p class="subscribe__spots" id="subscribe-spots" aria-live="polite">Checking spots…</p>
-        <button class="subscribe__button" id="subscribe-button" type="submit" disabled>Continue to payment</button>
-        <p class="subscribe__error" id="subscribe-error" role="alert"></p>
-        <p class="subscribe__fine">
-          Farm-gate pickup only, no delivery. Secure payment by Stripe; the first
-          payment is taken at sign-up, then each week after.
-        </p>
-        <p class="subscribe__fine" id="subscribe-manage" hidden>
-          Already subscribed? <a id="portal-link" href="#">Manage or cancel your subscription</a>
-        </p>
-        <noscript><p class="subscribe__fine">Subscribing needs JavaScript turned on.</p></noscript>
-      </form>
-      <div class="subscribe__full" id="subscribe-full" hidden></div>
-    </section>
-
-    <section id="visit" class="visit" aria-labelledby="visit-heading">
-      <h2 id="visit-heading">At the gate</h2>
-      <div class="visit__strip">
-        <div>
-          <h3>Where</h3>
-          <p>Wrexham Road, Thirroul</p>
         </div>
-        <div>
-          <h3>When</h3>
-          <p>Friday &amp; Saturday afternoons</p>
-        </div>
-        <div>
-          <h3>Today’s blooms</h3>
+        <div class="story__copy">
+          <p class="eyebrow">The story</p>
+          <h2 id="story-heading">A trampoline, a backyard, and a lot of sweet peas.</h2>
           <p>
-            Follow
-            <a href="https://www.instagram.com/trampoline.flower.farm/" target="_blank" rel="noopener noreferrer">@trampoline.flower.farm</a>
+            When a media redundancy opened the door, Angie Thompson turned her
+            Thirroul backyard on Wrexham Road, trampoline and all, into a small
+            cut-flower farm on Dharawal Country.
           </p>
-        </div>
-        <div>
-          <h3>Grower</h3>
-          <p>Angie Thompson</p>
+          <p>
+            Everything is grown small-scale and by hand: no plastics, no pesticides,
+            just whatever the season and the coastal weather let through. Bunches are
+            picked the day you collect them.
+          </p>
+          <p class="story__sign">Grown by Angie Thompson, Thirroul</p>
         </div>
       </div>
-      <p class="visit__note">
-        Sometimes at Homecoming too, when the season allows.
-      </p>
+    </section>
+
+    <!-- Subscription -->
+    <section id="subscribe" class="subscribe section" aria-labelledby="subscribe-heading">
+      <div class="wrap subscribe__inner">
+        <div class="subscribe__intro">
+          <p class="eyebrow">Weekly flower subscription</p>
+          <h2 id="subscribe-heading">Your bunch, set aside every week.</h2>
+          <p class="subscribe__lede">
+            A bunch set aside for you at the farm gate every week. Pick it up
+            on Wrexham Road, Friday or Saturday afternoon. Billing pauses in the
+            off-season; cancel any time.
+          </p>
+          <figure class="subscribe__figure">
+            <img
+              src="images/bunches-overhead-700.jpg"
+              srcset="images/bunches-overhead-700.jpg 525w, images/bunches-overhead-1200.jpg 900w"
+              sizes="(min-width: 960px) 34vw, 88vw"
+              alt="Two wrapped bunches of poppies, gerberas and sweet peas lying on the ground in afternoon sun"
+              width="900"
+              height="1200"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+
+        <div class="subscribe__card">
+          <form id="subscribe-form" class="subscribe__form" novalidate>
+            <fieldset>
+              <legend>Choose your bunch</legend>
+              <div class="subscribe__choices" id="choices-size"></div>
+            </fieldset>
+            <fieldset id="fieldset-frequency">
+              <legend>How often</legend>
+              <div class="subscribe__choices" id="choices-frequency"></div>
+            </fieldset>
+            <fieldset>
+              <legend>Pickup at the gate</legend>
+              <div class="subscribe__choices" id="choices-day"></div>
+            </fieldset>
+
+            <p class="subscribe__summary" id="subscribe-summary" aria-live="polite"></p>
+            <p class="subscribe__spots" id="subscribe-spots" aria-live="polite">Checking spots…</p>
+            <button class="btn btn--poppy subscribe__button" id="subscribe-button" type="submit" disabled>Continue to payment</button>
+            <p class="subscribe__error" id="subscribe-error" role="alert"></p>
+            <p class="subscribe__fine">
+              Farm-gate pickup only, no delivery. Secure payment by Stripe; the first
+              payment is taken at sign-up, then each week after.
+            </p>
+            <p class="subscribe__fine" id="subscribe-manage" hidden>
+              Already subscribed? <a id="portal-link" href="#">Manage or cancel your subscription</a>
+            </p>
+            <noscript><p class="subscribe__fine">Subscribing needs JavaScript turned on.</p></noscript>
+          </form>
+          <div class="subscribe__full" id="subscribe-full" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="how section" aria-labelledby="how-heading">
+      <div class="wrap">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-heading">Four easy steps to a house full of flowers.</h2>
+        <ol class="how__steps">
+          <li>
+            <span class="how__num" aria-hidden="true">1</span>
+            <h3>Choose your bunch</h3>
+            <p>Small for the kitchen table at $30, or large for the whole house at $50.</p>
+          </li>
+          <li>
+            <span class="how__num" aria-hidden="true">2</span>
+            <h3>Pick your day</h3>
+            <p>Collect on Friday or Saturday afternoon, whichever suits your week.</p>
+          </li>
+          <li>
+            <span class="how__num" aria-hidden="true">3</span>
+            <h3>Collect at the gate</h3>
+            <p>Your bunch is picked that day and waiting at the gate on Wrexham Road.</p>
+          </li>
+          <li>
+            <span class="how__num" aria-hidden="true">4</span>
+            <h3>Pause or cancel any time</h3>
+            <p>Billing pauses when the season does. Manage everything online.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery section" aria-labelledby="gallery-heading">
+      <div class="wrap">
+        <div class="gallery__head">
+          <p class="eyebrow">From the beds</p>
+          <h2 id="gallery-heading">What’s been growing.</h2>
+        </div>
+        <ul class="gallery__grid">
+          <li class="g g--tall"><img src="images/bunch-gerberas-poppies-900.jpg" alt="Bright bunches of orange gerberas, poppies and pink sweet peas" width="675" height="900" loading="lazy" /></li>
+          <li class="g"><img src="images/sweetpeas-closeup-900.jpg" alt="Lavender and white sweet peas climbing in the garden" width="675" height="900" loading="lazy" /></li>
+          <li class="g"><img src="images/poppies-ranunculus-hand-900.jpg" alt="A hand holding a bunch of cream and orange poppies with pink ranunculus" width="675" height="900" loading="lazy" /></li>
+          <li class="g g--wide"><img src="images/crate-on-lawn-900.jpg" alt="A pink crate overflowing with yellow and white Iceland poppies and purple sweet peas on the lawn" width="675" height="900" loading="lazy" /></li>
+          <li class="g"><img src="images/bunch-roses-jar-900.jpg" alt="A small bunch of peach roses and lavender in a glass jar" width="675" height="900" loading="lazy" /></li>
+          <li class="g g--tall"><img src="images/dahlias-900.jpg" alt="Pink, red and peach dahlias in a leafy garden bed at dusk" width="675" height="900" loading="lazy" /></li>
+          <li class="g g--tall"><img src="images/bunch-poppies-sweetpeas-900.jpg" alt="Two wrapped bunches of sweet peas, poppies and paper daisies" width="675" height="900" loading="lazy" /></li>
+          <li class="g"><img src="images/vase-cafe-table-900.jpg" alt="Yellow and orange poppies with purple sweet peas in a bud vase on a café table" width="675" height="900" loading="lazy" /></li>
+          <li class="g"><img src="images/bud-vase-window-900.jpg" alt="Orange poppies and pink sweet peas in a white pot by a sunny window" width="675" height="900" loading="lazy" /></li>
+          <li class="g"><img src="images/buckets-mixed-900.jpg" alt="Buckets of mixed bunches with sweet peas, poppies and roses, ready to go" width="675" height="900" loading="lazy" /></li>
+        </ul>
+        <p class="gallery__more">
+          More on Instagram:
+          <a href="https://www.instagram.com/trampoline.flower.farm/" target="_blank" rel="noopener noreferrer">@trampoline.flower.farm</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section id="visit" class="visit section" aria-labelledby="visit-heading">
+      <div class="wrap visit__inner">
+        <div class="visit__copy">
+          <p class="eyebrow">At the farm gate</p>
+          <h2 id="visit-heading">Come by for a bunch.</h2>
+          <dl class="visit__list">
+            <div>
+              <dt>Where</dt>
+              <dd>Wrexham Road, Thirroul</dd>
+            </div>
+            <div>
+              <dt>When</dt>
+              <dd>Friday &amp; Saturday afternoons</dd>
+            </div>
+            <div>
+              <dt>What’s at the gate</dt>
+              <dd>
+                It changes with the season. Instagram is always the latest:
+                <a href="https://www.instagram.com/trampoline.flower.farm/" target="_blank" rel="noopener noreferrer">@trampoline.flower.farm</a>
+              </dd>
+            </div>
+            <div>
+              <dt>Grower</dt>
+              <dd>Angie Thompson</dd>
+            </div>
+          </dl>
+          <p class="visit__note">Sometimes at Homecoming too, when the season allows.</p>
+        </div>
+        <figure class="visit__figure">
+          <img
+            src="images/sweetpea-bed-700.jpg"
+            srcset="images/sweetpea-bed-700.jpg 525w, images/sweetpea-bed-1200.jpg 900w"
+            sizes="(min-width: 960px) 36vw, 88vw"
+            alt="Lavender sweet peas flowering along a raised garden bed under a blue sky"
+            width="900"
+            height="1200"
+            loading="lazy"
+          />
+        </figure>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__name">Trampoline Flower Farm</p>
-    <p>
-      <a href="https://www.instagram.com/trampoline.flower.farm/" target="_blank" rel="noopener noreferrer">@trampoline.flower.farm</a>
-    </p>
-    <p class="site-footer__meta">
-      Thirroul · Dharawal Country · no plastics, no pesticides
-    </p>
+    <div class="wrap site-footer__inner">
+      <p class="site-footer__name">Trampoline <em>Flower Farm</em></p>
+      <p>Thirroul · Dharawal Country · no plastics, no pesticides</p>
+      <p>
+        <a href="https://www.instagram.com/trampoline.flower.farm/" target="_blank" rel="noopener noreferrer">Instagram @trampoline.flower.farm</a>
+      </p>
+    </div>
   </footer>
   <script src="site-config.js"></script>
   <script src="subscribe.js" defer></script>

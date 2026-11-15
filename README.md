@@ -13,7 +13,7 @@ Then open http://localhost:8765
 ## Notes
 
 - Photo-forward layout matched to the Instagram aesthetic.
-- Images under `photos/web/` are mockup captures from public Instagram / Illawarra Flame coverage. Replace with rights-cleared originals before a public launch.
+- Images under `images/` are web-sized copies of Trampoline Flower Farm Instagram photos (originals in the farm's Instagram); confirm Angie is happy with each before a public launch.
 
 ## Flower subscriptions
 

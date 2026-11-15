@@ -5,18 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
   <title>Checkout cancelled · Trampoline Flower Farm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,50;1,9..144,400..600,50&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="notice-page">
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="wordmark" href="./">Trampoline Flower Farm</a>
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="./">
+        <span class="wordmark__mark" aria-hidden="true">✿</span>
+        <span>Trampoline <em>Flower Farm</em></span>
+      </a>
     </div>
   </header>
-  <main class="notice">
-    <h1>No worries, nothing was charged.</h1>
-    <p>Your checkout was cancelled. You can come back and subscribe whenever you like, while spots last.</p>
-    <p><a href="./#subscribe">Back to the flower subscription</a></p>
+  <main class="notice" id="main">
+    <div class="notice__card">
+      <img class="notice__img" src="images/bud-vase-window-900.jpg" alt="" width="128" height="128" />
+      <h1>No worries, <em>nothing was charged.</em></h1>
+      <p>Your checkout was cancelled. Come back and subscribe whenever you like, while spots last.</p>
+      <a class="btn btn--poppy" href="./#subscribe">Back to the flower subscription</a>
+      <p class="notice__links"><a href="./">Back to the farm</a></p>
+    </div>
   </main>
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p class="site-footer__name">Trampoline <em>Flower Farm</em></p>
+      <p>Thirroul · Dharawal Country · no plastics, no pesticides</p>
+      <p><a href="https://www.instagram.com/trampoline.flower.farm/" target="_blank" rel="noopener noreferrer">Instagram @trampoline.flower.farm</a></p>
+    </div>
+  </footer>
 </body>
 </html>
