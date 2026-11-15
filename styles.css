@@ -865,6 +865,20 @@ h2 em,
   }
 }
 
+/* Hero photo sits above the headline and Subscribe button on smaller screens */
+@media (max-width: 959px) {
+  .hero__figure {
+    order: -1;
+    width: min(100%, 26rem);
+  }
+  .hero__img {
+    aspect-ratio: 1 / 1;
+  }
+  .hero__inner {
+    gap: 2rem;
+  }
+}
+
 @media (min-width: 820px) {
   .site-nav a:not(.btn) {
     display: inline;
