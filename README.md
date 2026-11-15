@@ -17,8 +17,8 @@ Then open http://localhost:8765
 
 ## Flower subscriptions
 
-Subscribers choose a bunch (small $30 or large $50, AUD), how often (weekly: charged and
-picked up every week; monthly: charged once a month for one bunch) and a pickup afternoon
+Subscribers choose a bunch (small $30 or large $50, AUD), a weekly plan (charged and
+picked up every week) and a pickup afternoon
 (Friday or Saturday) at the farm gate in Thirroul. Payment happens on Stripe's own hosted
 checkout page, so no card details ever touch this site. Subscriptions are capped (10 by default).
 

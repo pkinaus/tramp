@@ -56,13 +56,11 @@ const req = (method, path, body, headers = {}) =>
   });
 const quiet = () => {};
 
-test('plans: small $30, large $50, four lookup keys, cap 10', () => {
+test('plans: small $30, large $50, two lookup keys, cap 10', () => {
   assert.deepEqual(plans.sizes.map((s) => s.amount), [3000, 5000]);
   assert.deepEqual(allPlans().map((p) => `${p.lookupKey}:${p.amount}/${p.interval}`), [
     'tff_small_weekly:3000/week',
-    'tff_small_monthly:3000/month',
     'tff_large_weekly:5000/week',
-    'tff_large_monthly:5000/month',
   ]);
   assert.equal(plans.maxSubscribers, 10);
 });
@@ -99,18 +97,18 @@ test('MAX_SUBSCRIBERS env overrides the cap', async () => {
 test('checkout creates a subscription session with metadata, phone, name, idempotency key', async () => {
   const stripe = fakeStripe({ subs: activeSubs(9) });
   const res = await handleRequest(
-    req('POST', '/api/checkout', { size: 'large', frequency: 'monthly', pickupDay: 'saturday', attemptId: 'abc12345-xyz' }),
+    req('POST', '/api/checkout', { size: 'large', frequency: 'weekly', pickupDay: 'saturday', attemptId: 'abc12345-xyz' }),
     { stripe, env, log: quiet, now: () => 1_800_000_000_000 },
   );
   assert.equal(res.status, 200);
   assert.equal((await res.json()).url, 'https://checkout.stripe.com/c/pay/cs_test_new');
   const { params, opts } = stripe.calls.create[0];
   assert.equal(params.mode, 'subscription');
-  assert.deepEqual(params.line_items, [{ price: 'price_tff_large_monthly', quantity: 1 }]);
+  assert.deepEqual(params.line_items, [{ price: 'price_tff_large_weekly', quantity: 1 }]);
   assert.equal(params.payment_method_types, undefined);
   assert.deepEqual(params.phone_number_collection, { enabled: true });
   assert.equal(params.custom_fields[0].key, 'full_name');
-  assert.deepEqual(params.metadata, { tff: 'flower_subscription', size: 'large', frequency: 'monthly', pickup_day: 'saturday' });
+  assert.deepEqual(params.metadata, { tff: 'flower_subscription', size: 'large', frequency: 'weekly', pickup_day: 'saturday' });
   assert.deepEqual(params.subscription_data.metadata, params.metadata);
   assert.equal(params.success_url, 'https://example.test/tramp/success.html?session_id={CHECKOUT_SESSION_ID}');
   assert.equal(params.cancel_url, 'https://example.test/tramp/cancel.html');

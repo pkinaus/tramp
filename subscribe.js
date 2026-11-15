@@ -119,6 +119,7 @@
       plans = p;
       radios(el('choices-size'), 'size', p.sizes, (s) => `${s.name} <em>${money(s.amount, p.currency)}</em>`);
       radios(el('choices-frequency'), 'frequency', p.frequencies, (f) => `${f.label} <em>${f.note}</em>`);
+      if (p.frequencies.length < 2) el('fieldset-frequency').hidden = true;
       radios(el('choices-day'), 'pickupDay', p.pickupDays, (d) => d.label);
       updateSummary();
       return loadStatus();
